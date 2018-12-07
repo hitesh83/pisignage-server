@@ -5,7 +5,7 @@ var path = require('path');
 
 var rootPath = process.cwd(),
     dataDir = path.join(rootPath, '/data'),
-    assetDir = path.join(rootPath, '/../media');
+    assetDir = path.join(rootPath, '/../advert');
 
 module.exports = {
     root: rootPath,
