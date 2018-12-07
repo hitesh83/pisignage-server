@@ -348,7 +348,7 @@ angular.module('piPlaylists.controllers', [])
         $scope.layoutOtherZones = layoutOtherZones;
 
         var enableCustomZones = function(templateName) {
-            $http.get("/media/"+templateName, {} )
+            $http.get("/advert/"+templateName, {} )
                 .success(function(data, status) {
                     if (data) {
                         $scope.customZonesPresent = {}
