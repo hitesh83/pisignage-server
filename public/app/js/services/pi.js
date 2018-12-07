@@ -321,7 +321,7 @@ angular.module('pisignage.services',[]).
                             'uptime',
                             'date',
                             'ifconfig',
-                            'ls ../media',
+                            'ls ../advert',
                             'tail -200 /home/pi/forever_out.log'
                             ],
             current = storedArry.length;
