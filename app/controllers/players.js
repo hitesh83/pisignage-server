@@ -574,7 +574,7 @@ exports.piScreenShot = function (sid,data) { // save screen shot in  _screenshot
         if (pendingSnapshots[cpuId]) {
             rest.sendSuccess(pendingSnapshots[cpuId], 'screen shot received',
                 {
-                    url: "/media/_thumbnails/"+cpuId+".jpeg",
+                    url: "/advert/_thumbnails/"+cpuId+".jpeg",
                     lastTaken: Date.now()
                 }
             );
@@ -592,7 +592,7 @@ exports.takeSnapshot = function (req, res) { // send socket.io event
         fs.stat(path.join(config.thumbnailDir, cpuId + '.jpeg'), function (err, stats) {
             rest.sendSuccess(res, 'player is offline, sending previous snapshot',
                 {
-                    url: "/media/_thumbnails/" + cpuId + ".jpeg",
+                    url: "/advert/_thumbnails/" + cpuId + ".jpeg",
                     lastTaken: stats ? stats.mtime : "NA"
                 }
             );
@@ -605,7 +605,7 @@ exports.takeSnapshot = function (req, res) { // send socket.io event
             fs.stat(path.join(config.thumbnailDir, cpuId + '.jpeg'), function (err, stats) {
                 rest.sendSuccess(res, 'screen shot command timeout',
                     {
-                        url: "/media/_thumbnails/" + cpuId + ".jpeg",
+                        url: "/advert/_thumbnails/" + cpuId + ".jpeg",
                         lastTaken: stats ? stats.mtime : "NA"
                     }
                 );
